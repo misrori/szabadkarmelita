@@ -24,7 +24,7 @@ except:
 
 
 
-if "lap jelenleg nem" in str(response.content) == False:
+if "lap jelenleg nem" in str(response.content) == True:
     
     telegram_url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     requests.post(telegram_url, json={
