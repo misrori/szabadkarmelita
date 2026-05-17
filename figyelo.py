@@ -27,10 +27,10 @@ print(str(response.content))
 if "jelenleg nem" in str(response.content):
     print("küldés")
     telegram_url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-    requests.post(telegram_url, json={
+    t = requests.post(telegram_url, json={
         "chat_id": CHAT_ID,
         "text": "message"
     })
-    print(kuldes)
+    print(t)
 
     print("Message sent!")
