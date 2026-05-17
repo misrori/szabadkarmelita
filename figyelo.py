@@ -5,6 +5,7 @@ import os
 TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
 CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
+
 # Compose the Telegram message
 message = (
     'mehet a foglalás'
@@ -34,3 +35,9 @@ if "jelenleg nem" in str(response.content):
     print(t)
 
     print("Message sent!")
+
+telegram_url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+requests.post(telegram_url, json={
+    "chat_id": CHAT_ID,
+    "text": "message"
+})
