@@ -22,7 +22,7 @@ try:
 except:
     print("Hiba: Nem sikerült csatlakozni a weboldalhoz. Lehet, hogy nem elérhető vagy probléma van az internetkapcsolattal.")
 
-
+print(str(response.content))
 
 if "lap jelenleg nem" in str(response.content) == True:
     
